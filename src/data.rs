@@ -1,7 +1,6 @@
 use crate::iso_file::InPlaceIsoFile;
 use crate::iso_sources::IsoSourceEnum;
 use color_eyre::Result;
-use ron::ser::PrettyConfig;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::fs::File;
@@ -34,7 +33,7 @@ impl Data {
 
     pub fn to_file(&self, path: &Path) -> Result<()> {
         let file = File::create(path)?;
-        let string = ron::ser::to_string_pretty(self, PrettyConfig::default())?;
+        let string = ron::ser::to_string_pretty(self, ron::ser::PrettyConfig::default())?;
         let mut writer = BufWriter::new(file);
         writer.write_all(string.as_bytes())?;
         Ok(())
