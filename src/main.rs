@@ -15,12 +15,6 @@ mod utils;
 
 use color_eyre::Result;
 
-pub mod built_info {
-    include!(concat!(env!("OUT_DIR"), "/built.rs"));
-}
-
-const VERSION: &str = built_info::PKG_VERSION;
-
 fn main() -> Result<()> {
     println!("Hello, world!");
 

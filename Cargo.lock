@@ -147,12 +147,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "built"
-version = "0.8.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f4ad8f11f288f48ca24471bbd51ac257aaeaaa07adae295591266b792902ae64"
-
-[[package]]
 name = "bumpalo"
 version = "3.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -786,7 +780,6 @@ checksum = "7943c866cc5cd64cbc25b2e01621d07fa8eb2a1a23160ee81ce38704e97b8ecf"
 name = "iso-updater"
 version = "0.1.0"
 dependencies = [
- "built",
  "clap",
  "color-eyre",
  "command-error",

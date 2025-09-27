@@ -4,7 +4,7 @@ use clap::Parser;
 use color_eyre::Result;
 
 #[derive(Parser, Debug)]
-#[command(name = "iso-updater", author, long_version = crate::VERSION)]
+#[command(name = "iso-updater", version)]
 #[command(about = "Update your ISO files and synchronize them with your USB drive")]
 #[command(propagate_version = true)]
 struct Cli {
